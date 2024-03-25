@@ -1,4 +1,4 @@
-name: first Github action
+name: tests
 
 
 on:
@@ -7,8 +7,8 @@ on:
       - master
 
 jobs:
-  Hello:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
     steps: 
-      - name: Hello world!
-        run: echo "hello shaxa"
+      - name: Test
+        run: go test
